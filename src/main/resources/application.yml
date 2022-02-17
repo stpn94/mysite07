@@ -1,0 +1,34 @@
+# common - spring configuration
+spring:
+# mvc
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:mysql://localhost:3306/webdb
+    username: root
+    password: rootroot
+# server
+server:
+  port: 8080
+  servlet:
+    context-path: /mysite07
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: false
+      force-request: false
+      force-response: false
