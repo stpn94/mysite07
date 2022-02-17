@@ -23,8 +23,7 @@ public class ParametterAop {
         System.out.println("들어갈때 정보 실행+++++++++++++++++++");
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Method method = methodSignature.getMethod();
-        System.out.println(method.getName());
-
+        System.out.println("[메서드이름] : " + method.getName());
         Object[] args = joinPoint.getArgs();
         for (Object obj : args) {
             System.out.println("[타입] : " + obj.getClass().getSimpleName());
@@ -36,7 +35,6 @@ public class ParametterAop {
     @AfterReturning(value = "pointCut()", returning = "returnObj")
     public void afterReturn(JoinPoint joinPoint, Object returnObj) {
         System.out.println("나올때 정보 실행+++++++++++++++++++");
-
         System.out.println("[출력객체] : " + returnObj);
 
     }

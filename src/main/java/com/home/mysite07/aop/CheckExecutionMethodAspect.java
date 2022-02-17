@@ -18,7 +18,7 @@ public class CheckExecutionMethodAspect {
         String methodName = pjp.getSignature().getName();
         String taskName = className + "." + methodName;
 
-        System.out.println("[Execution][" + taskName + "]");
+        System.out.println("[실행 경로] : [" + taskName + "]");
 
         return result;
     }
